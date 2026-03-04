@@ -25,7 +25,7 @@ Here is the step-by-step breakdown of the capture and training process used for 
 
 | Front Spatial Boundary | Rear Spatial Boundary |
 | :---: | :---: |
-| ![Bounding Box Front](images/YOUR_BOUNDING_BOX_FRONT.jpg) | ![Bounding Box Rear](images/YOUR_BOUNDING_BOX_REAR.jpg) |
+| ![Bounding Box Reference 1](images/Pre-Scan-Right.jpg) | ![Bounding Box Reference 2](images/Pre-Scan-Left.jpg) |
 | *Defining the front center origin point.* | *Closing the 180° rear boundary.* |
 
 ### 2. Multi-Elevation Image Acquisition (Camera Pose Estimation)
