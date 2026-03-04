@@ -10,8 +10,6 @@ An exploration into capturing real-world environments and assets via modern 3D r
 * **Rendering:** Three.js / WebGL / lil-gui
 * **Format:** GLB (Binary glTF) - Optimized for web performance and simulation compatibility.
 
-##  Scans & Assets Gallery
-
 ## The Capture & Reconstruction Pipeline
 
 To successfully transition real-world objects into simulation-ready assets, it is critical to understand the underlying data acquisition and neural rendering pipeline. This project utilizes Luma AI, which leverages a combination of **Structure from Motion (SfM)**, **3D Gaussian Splatting (3DGS)**, and **Neural Radiance Fields (NeRFs)**. 
