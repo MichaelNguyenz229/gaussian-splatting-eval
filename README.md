@@ -23,10 +23,10 @@ Here is the step-by-step breakdown of the capture and training process used for 
 **The Process:** The capture begins by setting two opposing center points (180 degrees apart) around the target object to establish spatial origin and scale. A preliminary 3D bounding box is generated, which is then manually adjusted to tightly enclose the object. 
 **The Science:** This step is crucial for computational efficiency; it defines the region of interest (ROI), instructing the algorithm where to concentrate the highest density of rendering primitives and ignore background noise.
 
-| Front Spatial Boundary | Rear Spatial Boundary |
+| Spatial Boundary View 1 | Spatial Boundary View 2 |
 | :---: | :---: |
 | ![Bounding Box Reference 1](images/Pre-Scan-Right.jpg) | ![Bounding Box Reference 2](images/Pre-Scan-Left.jpg) |
-| *Defining the front center origin point.* | *Closing the 180° rear boundary.* |
+| *Defining first center point.* | *Closing the 180° boundary.* |
 
 ### 2. Multi-Elevation Image Acquisition (Camera Pose Estimation)
 **The Process:** Data collection is guided by three virtual rings (low, middle, and high elevations) surrounding the object. I follow these paths to capture overlapping video frames.
