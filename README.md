@@ -47,6 +47,6 @@ Here is the step-by-step breakdown of the capture and training process used for 
 
 | Asset | 1. Sparse Point Cloud | 2. Gaussian Ellipses | 3. Final Optimized Mesh |
 | :--- | :---: | :---: | :---: |
-| **OctoTest** | ![Octo Cloud](images/octo_cloud.jpg) | ![Octo Ellipses](images/octo_ellipses.png) | ![Octo Final](images/octo_final.png) |
+| **OctoTest** | ![Octo Cloud](images/octo_cloud.jpg) | ![Octo Ellipses](images/octo_ellipses.jpg) | ![Octo Final](images/octo_final.jpg) |
 | **2019 Prius XLE** | ![Prius Cloud](images/prius_cloud.jpg) | ![Prius Ellipses](images/prius_ellipses.jpg) | ![Prius Final](images/prius_final.jpg) |
 | **Tesla Optimus** | ![Optimus Cloud](images/optimus_cloud.jpg) | ![Optimus Ellipses](images/optimus_ellipses.jpg) | ![Optimus Final](images/optimus_final.jpg) |
