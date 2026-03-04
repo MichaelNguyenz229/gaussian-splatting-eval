@@ -15,7 +15,7 @@
         canvas { display: block; }
         #loading-label {
             position: absolute; bottom: 20px; left: 20px;
-            color: white; background: rgba(0,0,0,0.7);
+            color:white; background: rgba(0,0,0,0.7);
             padding: 8px 12px; border-radius: 4px; display: none;
             border: 1px solid #444;
         }
@@ -43,7 +43,8 @@
         // --- 1. CONFIGURATION ---
         const modelFiles = {
             'OctoTest': 'glb-files/OctoTest_textured_mesh_medpoly_glb.glb',
-            '2019 Prius XLE': 'glb-files/Prius_XLE_textured_mesh_medpoly_glb.glb'
+            '2019 Prius XLE': 'glb-files/Prius_XLE_textured_mesh_medpoly_glb.glb',
+            'Optimus': 'glb-files/Optimus_textured_mesh_medpoly_glb.glb'
         };
 
         const state = { current: 'OctoTest' };
@@ -107,7 +108,7 @@
                 // and offset Y so the bottom of the bounding box is at 0
                 currentSceneModel.position.x = -center.x;
                 currentSceneModel.position.z = -center.z;
-                currentSceneModel.position.y = (sizeVec.y / 2) - center.y + 0.05; 
+                currentSceneModel.position.y = (sizeVec.y / 2) - center.y + 0.07; 
                 
                 scene.add(currentSceneModel);
                 loadingLabel.style.display = 'none';
