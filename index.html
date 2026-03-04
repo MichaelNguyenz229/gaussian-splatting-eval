@@ -70,7 +70,7 @@
         sun.position.set(5, 10, 7.5);
         scene.add(sun);
 
-        // --- 4. ENVIRONMENT (Grid & Floor) ---
+        // --- 4. ENVIRONMENT & CONTROLS ---
         const size = 20;
         const divisions = 20;
         const gridHelper = new THREE.GridHelper(size, divisions, 0x888888, 0x444444);
@@ -85,6 +85,17 @@
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
+        
+        // NEW: Enable auto-rotation
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 1.5; // Adjust this number to make it spin faster or slower
+
+        
+
+        // NEW: Stop spinning when the user interacts with the canvas
+        controls.addEventListener('start', () => {
+            controls.autoRotate = false;
+        });
 
         // --- 5. MODEL LOADING LOGIC ---
         const loader = new GLTFLoader();
@@ -108,7 +119,7 @@
                 // and offset Y so the bottom of the bounding box is at 0
                 currentSceneModel.position.x = -center.x;
                 currentSceneModel.position.z = -center.z;
-                currentSceneModel.position.y = (sizeVec.y / 2) - center.y + 0.07; 
+                currentSceneModel.position.y = (sizeVec.y / 2) - center.y + 0.01; 
                 
                 scene.add(currentSceneModel);
                 loadingLabel.style.display = 'none';
@@ -117,6 +128,10 @@
                 const maxDim = Math.max(sizeVec.x, sizeVec.y, sizeVec.z);
                 camera.position.set(0, maxDim * 0.8, maxDim * 1.5);
                 controls.target.set(0, 0, 0);
+                
+                // NEW: Re-enable spinning every time a new model loads
+                controls.autoRotate = true; 
+                
                 controls.update();
 
             }, undefined, (error) => {
@@ -134,6 +149,7 @@
         // --- 7. ANIMATION & RESIZE ---
         function animate() {
             requestAnimationFrame(animate);
+            // controls.update() is required for both damping and autoRotate to work
             controls.update();
             renderer.render(scene, camera);
         }
