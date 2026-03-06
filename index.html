@@ -86,13 +86,9 @@
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         
-        // NEW: Enable auto-rotation
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 1.5; // Adjust this number to make it spin faster or slower
+        controls.autoRotateSpeed = 4; 
 
-        
-
-        // NEW: Stop spinning when the user interacts with the canvas
         controls.addEventListener('start', () => {
             controls.autoRotate = false;
         });
@@ -129,7 +125,6 @@
                 camera.position.set(0, maxDim * 0.8, maxDim * 1.5);
                 controls.target.set(0, 0, 0);
                 
-                // NEW: Re-enable spinning every time a new model loads
                 controls.autoRotate = true; 
                 
                 controls.update();
@@ -149,7 +144,6 @@
         // --- 7. ANIMATION & RESIZE ---
         function animate() {
             requestAnimationFrame(animate);
-            // controls.update() is required for both damping and autoRotate to work
             controls.update();
             renderer.render(scene, camera);
         }

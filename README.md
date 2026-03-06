@@ -22,7 +22,7 @@ Here is the step-by-step breakdown of the capture and training process used for 
 
 | Spatial Boundary View 1 | Spatial Boundary View 2 |
 | :---: | :---: |
-| ![Bounding Box Reference 1](images/Pre-Scan-Right.jpg) | ![Bounding Box Reference 2](images/Pre-Scan-Left.jpg) |
+| ![Bounding Box Reference 1](images/Pre-Scan-1.jpg) | ![Bounding Box Reference 2](images/Pre-Scan-2.jpg) |
 | *Defining first center point.* | *Closing the 180° boundary.* |
 
 ### 2. Multi-Elevation Image Acquisition (Camera Pose Estimation)
@@ -32,7 +32,7 @@ Here is the step-by-step breakdown of the capture and training process used for 
 | Guided Capture - View 1 | Guided Capture - View 2 |
 | :---: | :---: |
 | ![Capture Ring 1](images/RING_IMAGE_1.jpg) | ![Capture Ring 2](images/RING_IMAGE_2.jpg) |
-| *Following virtual rings to ensure adequate parallax.* | *Multi-elevation orbits for complete surface coverage.* |
+| *Following virtual rings to ensure adequate object coverage* | *Multi-elevation orbits for complete surface coverage.* |
 
 ### 3. Cloud Compute: Training 3DGS & NeRF
 **The Process:** The 2D data and camera poses are uploaded to the cloud, moving through distinct "Training Gaussian Splatting" and "Training NeRF" phases.
